@@ -1,0 +1,23 @@
+
+<!-- <img cdkDrag src="https://images.pexels.com/photos/15588318/pexels-photo-15588318.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"> -->
+<!-- <div id="bounding-box" class="parent">
+  <div cdkDrag cdkDragBoundary="#bounding-box" class="how"> Hello</div>
+</div> -->
+
+<div>
+    <button (click)="addControl()">add</button>
+  </div>
+  <div class="header-image">
+    <div id="box" *ngFor="let control of controls;"
+            #resizeBox class="control-image" style="position: relative;" cdkDrag cdkDragBoundary=".header-image"
+            [style.width.px]="control.width"
+            [style.height.px]="control.height"
+            (click)="clickControl(control)"
+              >
+                  <span #dragHandleRB [cdkDragLockAxis]="lockAxis" class="dragHandle rb" cdkDrag (cdkDragMoved)="dragMove(dragHandleRB, $event, control)"></span>
+                  <!-- <span #dragHandleBottom cdkDragLockAxis="y" class="dragHandle bottom" cdkDrag (cdkDragMoved)="dragMove(dragHandleBottom, $event, control)"></span>
+                  <span #dragHandleRight cdkDragLockAxis="x" class="dragHandle right" cdkDrag (cdkDragMoved)="dragMove(dragHandleRight, $event, control)"></span> -->
+                  <!-- <img cdkDrag src="https://images.pexels.com/photos/15588318/pexels-photo-15588318.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"> -->
+              </div>
+  </div>
+  
