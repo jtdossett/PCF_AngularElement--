@@ -23,6 +23,7 @@
     "@angular/platform-browser": "^15.1.0",
     "@angular/platform-browser-dynamic": "^15.1.0",
     "@angular/router": "^15.1.0",
+    "@syncfusion/ej2-angular-pdfviewer": "^20.4.54",
     "concat": "^1.0.3",
     "document-register-element": "^1.8.1",
     "rxjs": "~7.8.0",

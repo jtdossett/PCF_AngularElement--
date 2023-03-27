@@ -27,8 +27,12 @@ export class PCFAngularElementComponent implements ComponentFramework.StandardCo
         this._container = container;
         this._notifyOutputChanged = notifyOutputChanged;
         this._htmlElement = document.createElement("app-pcf-component");
+        // this._htmlElement = document.createElement("app-syncfusion");
         //Associate controls to container
         container.appendChild(this._htmlElement);
+        (window as any).__Zone_disable_ZoneAwarePromise = true;
+
+        (window as any).Zone.assertZonePatched = () => {};
     }
 
 
