@@ -7,8 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "bundle": "ng build --configuration production --output-hashing none & node elements-build.js",
-    "testHTML": "ng build --configuration production --output-hashing none & node elements-build.js && npm run plainHTML",
+    "bundle": "ng build --configuration production --output-hashing none --single-bundle && mv ./dist/pcfangular-element/main.js ./dist/pcfangular-element/bundle.js" ,
+    "testHTML": "ng build --configuration production --output-hashing none --single-bundle && npm run plainHTML",
     "plainHTML": "lite-server"
   },
   "private": true,
@@ -26,6 +26,7 @@
     "@syncfusion/ej2-angular-pdfviewer": "^20.4.54",
     "concat": "^1.0.3",
     "document-register-element": "^1.8.1",
+    "ngx-build-plus": "^15.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
